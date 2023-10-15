@@ -2,7 +2,7 @@ const {Router} = require("express")
 const router = Router()
 const db = require("../database")
 
-
+// VIEW USER PROFILE PAGE
 router.get("/profile", async(req, res) => {
 
 
@@ -13,9 +13,9 @@ router.get("/profile", async(req, res) => {
 })
 
 
-router.get("/settings", (req, res) => {
-    res.render("settings")
-})
+// router.get("/settings", (req, res) => {
+//     res.render("settings")
+// })
 
 
 

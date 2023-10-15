@@ -2,6 +2,8 @@ const { Router } = require("express")
 const router = Router()
 const db = require("../database")
 
+// VIEW SEND MESSAGE PAGE
+
 router.get("/anonymous/:user", async(req, res) => {
     const username = req.params.user
     const [User] = await db.query(`SELECT * FROM users

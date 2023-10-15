@@ -6,15 +6,17 @@ const saltRounds = 10;
 const db = require("../database")
 const _ = require('lodash');
 
-
+// VIEW HOME ROUTE/ LOGIN PAGE
 router.get("/", (req, res) => {
     res.render("login")
 })
 
+// VIEW REGISTER PAGE
 router.get("/signup", (req, res) => {
     res.render("signup")
 })
 
+// DESTROY EXISTING SESSION
 router.post("/logout", (req, res) => {
     req.session.destroy()
     res.redirect("/")
