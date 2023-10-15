@@ -1,0 +1,55 @@
+
+<%- include("partials/header") %>
+
+
+
+<div class="container welcome-msg" style="text-align: center; color: white;">
+    <h6 style="color: rgb(215, 220, 67);" >NOW ITS YOUR TURN to create an account <br>and dare your friends to tell you what they think about you.</h6>
+
+<div class="container">
+    <h3>How it works?</h3>
+   
+        <li>Create an Account now</li>
+        <li>Share your special link with others</li>
+        <li>Receive anonymous messages from your friends</li> 
+</div>
+
+</div>
+
+
+<main class="form-signin w-100 m-auto">
+    <form action="/signup" method="post" >
+      <h1 style="color:whitesmoke; font-weight: bold;"  class="h3 mb-3 fw-normal"> Register</h1>
+      <span> </span>
+  
+      <div class="form-floating">
+            <input type="text" value="" autocomplete="on" required  name="username" class="form-control" placeholder="Enter username">
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" value="" autocomplete="on" required  name="email" class="form-control" placeholder="Enter email">
+    <label for="floatingInput">Email</label>
+  </div>
+      <div class="form-floating">
+        <input type="password" name="password" required  class="form-control" placeholder="Enter Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <button class="btn btn-primary w-100 py-2" type="submit">Signup</button>
+
+    </form>
+    <br>
+    <div class="container">
+        <span> ALREADY HAVE AN ACCOUNT? </span>
+      <a style="color: rgb(45, 237, 61); font-weight: bold;" href="/login">LOGIN</a>
+      </div>
+  </main>
+
+
+
+
+
+
+
+
+<%- include("partials/footer") %>

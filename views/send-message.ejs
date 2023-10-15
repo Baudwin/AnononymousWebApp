@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+<div class="compose" style="text-align: center;">
+
+<form action="/compose" method="post">
+
+    <h2>Say Something..</h2>
+    <br><br>
+    <form action="" method="post">
+        <p>Say Something About Me <span style="color: red;">*</span> </p>
+        <br>
+        <input value="<%= user.userID %>" type="text" hidden name="id" id="">
+        <textarea required placeholder="Leave A message for <%= user.username %> here.." name="message" id="" cols="40" rows="6"></textarea>
+<br><br>
+<button class="btn btn-success" type="submit">Send Message</button>
+    </form>
+
+
+</form>
+    
+</div>
+
+<%- include("partials/footer") %>

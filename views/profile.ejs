@@ -1,0 +1,51 @@
+
+
+<%- include("partials/header") %>
+
+<!-- HEADER -->
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a style="margin-left: 5px;font-weight: bold;" href="/profile" class="navbar-brand"> Anonymous</a>
+
+    <form action="/logout" method="post">
+      <button style="margin-right: 4px;" class="btn btn-outline-danger btn-md" type="submit">Logout</button>
+</nav>
+<!-- END OF HEADER -->
+
+
+<div class="contacts-info container">
+<div class="container">
+
+    <div style="text-align: center;">
+
+        <h2 style="color: rgb(221, 216, 227);"> Hello <span style="color: rgb(221, 216, 227);">  <%= user.username %></span></h2>
+        <br>
+        <h5 style="color: rgb(221, 216, 227);">Link</h5>
+        <p style="color: rgb(218, 111, 186);" ><%= user.link %></p>
+        <br><br>
+        
+        <h5 style="color: rgb(221, 216, 227);">Copy and Share the link above to get responses from your friends. <br> Hit the "View Messages" button to see the responses."</h5>
+        <br><br>
+        <a class="btn btn-secondary view-msg" href="/messages/<%= user.userID %>"> View Messages </a> 
+      
+        <br>
+        
+        <br>
+             <!-- <a href="/settings" class="btn btn-block btn-info" type="submit">Settings</a> -->
+       
+        
+            
+        </div>
+
+
+
+
+        </div>
+</div>
+
+
+
+
+<%- include("partials/footer") %>
+
+
+

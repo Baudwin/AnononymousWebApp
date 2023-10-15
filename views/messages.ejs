@@ -1,0 +1,50 @@
+
+<%- include("partials/header") %>
+
+
+
+<!-- HEADER -->
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a style="margin-left: 5px;font-weight: bold;" href="/profile" class="navbar-brand"> Anonymous</a>
+
+    <form action="/logout" method="post">
+        <button style="margin-right: 4px;" class="btn btn-outline-danger btn-md" type="submit">Logout</button>
+</nav>
+<!-- END OF HEADER -->
+
+
+<br>
+
+
+<div style="color: white;" class="contacts container">
+<div class="container">
+
+
+    <div style="text-align: center;">
+ <h2>My Messages</h2>
+ <p>These are all the messages you've received <br>
+Scroll down to view all </p>
+</div>
+ <hr>
+   
+       <% messages.forEach(message => { %>
+        <div class="container messages">
+        <h6>Message : </h6>  <p style="color: antiquewhite;" > <%= message.message %> </p>
+        
+        <p class="time"> Details : [ <%= message.details %> ]  </p>
+    </div>
+           
+        <% }) %>
+ 
+
+
+<div class="back-div" style="text-align: center;">
+    <a class="btn back btn-primary" href="/profile"> Go Back </a>
+</div>
+
+</div>
+
+
+</div>
+
+
